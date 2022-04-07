@@ -11,7 +11,10 @@ function App() {
       <h1>107%</h1>
       <nav className="navigation">
         <Link to="/">Home</Link>
-        <Link to="/standings">Standings</Link>  
+        <Link to="/standings">Standings</Link> 
+        <Link to="/standings">Standings</Link> 
+        <Link to="/standings">Standings</Link> 
+        <Link to="/standings">Standings</Link> 
       </nav>
 
       <Routes>
