@@ -14,17 +14,16 @@ function DriverStandings() {
   }, [])
 
   return (
-    <div className="standings">
-      
+    <div className="standings component">
       <h1>Current Drivers Standings</h1>
       {standings.MRData && (
-        <ul>
-          <li>
+        <div>
+          <p>
             Season: {standings.MRData.StandingsTable.StandingsLists[0].season}
-          </li>
-          <li>
+          </p>
+          <p>
             Round: {standings.MRData.StandingsTable.StandingsLists[0].round}
-          </li>
+          </p>
           {standings.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
             (driver, i) => (
               <div key={i}>
@@ -36,7 +35,7 @@ function DriverStandings() {
               </div>
             )
           )}
-        </ul>
+        </div>
       )}
     </div>
   )

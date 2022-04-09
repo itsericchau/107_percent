@@ -1,6 +1,6 @@
 function Home() {
     return (
-      <div className="home">
+      <div className="home component">
         <h1>Home!</h1>
       </div>
     )

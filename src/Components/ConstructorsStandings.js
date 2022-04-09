@@ -14,27 +14,27 @@ function ConstructorStandings() {
   }, [])
 
   return (
-    <div className="standings">
+    <div className="standings component">
       <h1>Current Constructors Standings</h1>
       {standings.MRData && (
-        <ul>
-          <li>
+        <div>
+          <p>
             Season: {standings.MRData.StandingsTable.StandingsLists[0].season}
-          </li>
-          <li>
+          </p>
+          <p>
             Round: {standings.MRData.StandingsTable.StandingsLists[0].round}
-          </li>
+          </p>
           {standings.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
             (constructor, i) => (
               <div key={i}>
                 <span>Position: {constructor.position} </span>
-                <span>Team: {constructor.Constructor.name}</span>
+                <span>Team: {constructor.Constructor.name} </span>
                 <span>Points: {constructor.points} </span>
                 <br />
               </div>
             )
           )}
-        </ul>
+        </div>
       )}
     </div>
   )
