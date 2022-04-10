@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
+require('dotenv').config()
 
 function Home() {
   const [news, setNews] = useState({})
