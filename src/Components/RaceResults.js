@@ -30,11 +30,13 @@ function RaceResults() {
           <span>
             {raceResults.MRData.RaceTable.Races[0].Results.map((driver, i) => (
               <div className="driver" key={i}>
-                <span>Position: {driver.position} </span>
+                <span>{driver.position}. </span>
                 <span>
-                  Driver: {driver.Driver.givenName}, {driver.Driver.familyName}{" "}
-                  ({driver.Driver.code})
+                  {driver.Driver.givenName}, {driver.Driver.familyName} (
+                  {driver.Driver.code}){" "}
                 </span>
+                <span>{driver.status}{" "}</span>
+                <span>{driver.Time && driver.Time.time}</span>
               </div>
             ))}
           </span>

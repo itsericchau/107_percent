@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 
-function ConstructorStandings() {
+function ConstructorsStandings() {
   const [standings, setStandings] = useState({})
 
   const getConstructorStandings = () => {
@@ -40,4 +40,4 @@ function ConstructorStandings() {
   )
 }
 
-export default ConstructorStandings
+export default ConstructorsStandings

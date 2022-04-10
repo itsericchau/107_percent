@@ -1,38 +1,72 @@
 import "./App.scss"
 import React, { useEffect, useState } from "react"
 import { Routes, Route, Link } from "react-router-dom"
-import Home from "./Components/Home"
-import Standings from "./Components/Standings"
+import News from "./Components/News"
 import RaceResults from "./Components/RaceResults"
 import Drivers from "./Components/Drivers"
 import RaceSchedule from "./Components/RaceSchedule"
+import Navbar from "react-bootstrap/Navbar"
+import { Container, Nav, NavDropdown } from "react-bootstrap"
+import DriversStandings from "./Components/DriversStandings"
+import ConstructorsStandings from "./Components/ConstructorsStandings"
+import DriversStandings2021 from "./Components/DriversStandings2021"
+import ConstructorsStandings2021 from "./Components/ConstructorsStandings2021"
 
 function App() {
   return (
     <div className="App">
       <nav className="navigation">
-        <Link to="/">Home</Link> <Link to="/standings">Standings</Link>{" "}
-        <Link to="/race_results">Race Results</Link>{" "}
-        <Link to="/drivers">Drivers</Link>{" "}
-        <Link to="/race_schedule">Race Schedule</Link>{" "}
+        <Navbar bg="light" expand="lg">
+          <Container>
+            <Navbar.Brand href="/">107%</Navbar.Brand>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+            <Navbar.Collapse id="basic-navbar-nav">
+              <Nav className="me-auto">
+                <Nav.Link href="/">News</Nav.Link>
+                <Nav.Link href="/race_schedule">Race Schedule</Nav.Link>
+                <NavDropdown title="Standings" id="basic-nav-dropdown">
+                  <NavDropdown.Item href="/drivers_standings">
+                    Current Drivers Standings
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/constructors_standings">
+                    Current Constructors Standings
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href="/drivers_standings_2021">
+                    Driver Standings 2021
+                  </NavDropdown.Item>
+                  <NavDropdown.Item href="/constructors_standings_2021">
+                    Constructors Standings 2021
+                  </NavDropdown.Item>
+                </NavDropdown>
+                <Nav.Link href="/race_results">Race Results</Nav.Link>
+                <Nav.Link href="/drivers">Drivers</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
       </nav>
       <main className="main">
         <h1>107%</h1>
-        <h2>
-          Formula One Directory for its history in races, circuits, drivers and
-          much more
-        </h2>
         <h3>
-          107% rule: During the first phase of qualifying, any driver who fails
-          to set a lap within 107 percent of the fastest Q1 time will not be
-          allowed to start the race. However, in exceptional circumstances,
-          which could include a driver setting a suitable time during practice,
-          the stewards may permit the car to start.
+          For the latest and greatest of Formula One coverage
         </h3>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/standings" element={<Standings />} />
+          <Route path="/" element={<News />} />
+          <Route path="/drivers_standings" element={<DriversStandings />} />
+          <Route
+            path="/drivers_standings_2021"
+            element={<DriversStandings2021 />}
+          />
+          <Route
+            path="/constructors_standings"
+            element={<ConstructorsStandings />}
+          />
+          <Route
+            path="/constructors_standings_2021"
+            element={<ConstructorsStandings2021 />}
+          />
           <Route path="/race_results" element={<RaceResults />} />
           <Route path="/drivers" element={<Drivers />} />
           <Route path="/race_schedule" element={<RaceSchedule />} />

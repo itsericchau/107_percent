@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 
-function DriversStandings() {
+function ConstructorsStandings2021() {
   const [standings, setStandings] = useState({})
 
-  const getDriverStandings = () => {
+  const getConstructorStandings = () => {
     return axios
-      .get("https://ergast.com/api/f1/current/driverStandings.json")
+      .get("https://ergast.com/api/f1/2021/constructorStandings.json")
       .then((res) => res.data)
   }
   useEffect(() => {
-    getDriverStandings().then((data) => setStandings(data))
+    getConstructorStandings().then((data) => setStandings(data))
   }, [])
 
   return (
     <div className="standings component">
-      <h1>Current Drivers Standings</h1>
+      <h1>Season 2021 Constructors Standings Final Results</h1>
       {standings.MRData && (
         <div>
           <p>
@@ -24,14 +24,12 @@ function DriversStandings() {
           <p>
             Round: {standings.MRData.StandingsTable.StandingsLists[0].round}
           </p>
-          {standings.MRData.StandingsTable.StandingsLists[0].DriverStandings.map(
-            (driver, i) => (
+          {standings.MRData.StandingsTable.StandingsLists[0].ConstructorStandings.map(
+            (constructor, i) => (
               <div key={i}>
-                <span>{driver.position}. </span>
-                <span>
-                  {driver.Driver.givenName} {driver.Driver.familyName}{" "}
-                </span>
-                <span>Points: {driver.points} </span>
+                <span>{constructor.position}. </span>
+                <span>Team: {constructor.Constructor.name} </span>
+                <span>Points: {constructor.points} </span>
                 <br />
               </div>
             )
@@ -42,4 +40,4 @@ function DriversStandings() {
   )
 }
 
-export default DriversStandings
+export default ConstructorsStandings2021

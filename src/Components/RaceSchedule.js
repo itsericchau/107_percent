@@ -14,14 +14,14 @@ function RaceSchedule() {
   }, [])
 
   return (
-    <div className="schedule">
+    <div className="schedule component">
       <h1>Current Season Race Schedule</h1>
       {schedule.MRData && (
         <ul>
           {schedule.MRData.RaceTable.Races.map((round, i) => (
             <div key={i}>
               <span>
-                Ciruit:{round.Circuit.circuitName} |{" "}
+              {round.Circuit.circuitName} |{" "}
                 {round.Circuit.Location.locality},{" "}
                 {round.Circuit.Location.country}
               </span>

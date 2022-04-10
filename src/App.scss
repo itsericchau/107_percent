@@ -1,6 +1,8 @@
+@import "~bootstrap/scss/bootstrap";
+
 .App {
+  display: grid;
   text-align: center;
-  background-color: aqua;
 }
 h1 {
   font-size: 3em;
@@ -12,7 +14,26 @@ h3 {
   font-size: 1em;
 }
 .component {
-  background-color: darkseagreen;
+  background-color: antiquewhite;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 5px 5px gainsboro;
+  font-size: 1.5em;
+  img {
+    width: 70%;
+    box-shadow: 5px 5px gray;
+  }
+  p {
+    width: 70%;
+    text-align: center;
+    margin: 10px auto;
+  }
+  a {
+    width: 70%;
+    text-align: center;
+    margin: 10px auto;
+  }
 }
 
 .navigation {
@@ -24,10 +45,9 @@ h3 {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  box-shadow: 5px 5px #888888;
 
   a {
-    color: white;
+    color: white !important;
     text-decoration: none;
     padding: 0 20px;
     font-size: 2em;
@@ -41,4 +61,24 @@ h3 {
 
 .main {
   margin-top: 64px;
+}
+
+.nav-item:hover {
+  display: block;
+}
+
+.navbar {
+  color: whitesmoke !important;
+  background-color: #e10600 !important;
+
+  .container {
+    background-color: #e10600;
+  }
+
+  .dropdown-item {
+    background-color: #e10600 !important;
+  }
+  .dropdown-menu {
+    background-color: #e10600 !important;
+  }
 }
