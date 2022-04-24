@@ -1,7 +1,7 @@
 import "./App.scss"
 import React, { useEffect, useState } from "react"
 import { Routes, Route, Link } from "react-router-dom"
-import News from "./Components/News"
+import Home from "./Components/Home"
 import RaceResults from "./Components/RaceResults"
 import Drivers from "./Components/Drivers"
 import RaceSchedule from "./Components/RaceSchedule"
@@ -22,7 +22,7 @@ function App() {
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/">News</Nav.Link>
+                <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/race_schedule">Race Schedule</Nav.Link>
                 <NavDropdown title="Standings" id="basic-nav-dropdown">
                   <NavDropdown.Item href="/drivers_standings">
@@ -49,27 +49,27 @@ function App() {
       <main className="main">
         <h1>107%</h1>
         <h3>
-          For the latest and greatest of Formula One coverage
+          For the latest Formula One coverage
         </h3>
 
         <Routes>
-          <Route path="/" element={<News />} />
+          <Route exact path="/" element={<Home />} />
           <Route path="/drivers_standings" element={<DriversStandings />} />
           <Route
-            path="/drivers_standings_2021"
+            exact path="/drivers_standings_2021"
             element={<DriversStandings2021 />}
           />
           <Route
-            path="/constructors_standings"
+            exact path="/constructors_standings"
             element={<ConstructorsStandings />}
           />
           <Route
-            path="/constructors_standings_2021"
+            exact path="/constructors_standings_2021"
             element={<ConstructorsStandings2021 />}
           />
-          <Route path="/race_results" element={<RaceResults />} />
-          <Route path="/drivers" element={<Drivers />} />
-          <Route path="/race_schedule" element={<RaceSchedule />} />
+          <Route exact path="/race_results" element={<RaceResults />} />
+          <Route exact path="/drivers" element={<Drivers />} />
+          <Route exact path="/race_schedule" element={<RaceSchedule />} />
         </Routes>
       </main>
     </div>

@@ -1,0 +1,148 @@
+{
+  "kind": "youtube#searchListResponse",
+  "etag": "IOrgO1zzzH2yv_ygmXJdCxlfQpY",
+  "nextPageToken": "CAQQAA",
+  "regionCode": "AU",
+  "pageInfo": {
+    "totalResults": 5470,
+    "resultsPerPage": 4
+  },
+  "items": [
+    {
+      "kind": "youtube#searchResult",
+      "etag": "n2TUueILVhFVtPmeKVL9sB515vs",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "HS12jxB2q98"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-23T16:03:52Z",
+        "channelId": "UCB_qr75-ydFVKSF9Dmo6izg",
+        "title": "F1 Sprint Highlights | 2022 Emilia Romagna Grand Prix | Crypto.com",
+        "description": "The highlights from a dramatic first F1 Sprint of 2022 in Imola! For more F1® videos, visit http://www.Formula1.com Follow F1®: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/HS12jxB2q98/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/HS12jxB2q98/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/HS12jxB2q98/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "FORMULA 1",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-23T16:03:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "YDDTl8iTEzCTzgqUUm7HRgoKw-s",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NOzarPBX73M"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-23T20:06:54Z",
+        "channelId": "UCB_qr75-ydFVKSF9Dmo6izg",
+        "title": "Drivers&#39; Post-Sprint Reaction | 2022 Emilia Romagna Grand Prix",
+        "description": "Hear from the drivers as they reflect on an action-packed Sprint at the 2022 Emilia Romagna Grand Prix! For more F1® videos, ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NOzarPBX73M/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NOzarPBX73M/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NOzarPBX73M/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "FORMULA 1",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-23T20:06:54Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "usi1biw84qxzA9zt8LPg3DwjPog",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "W1be43bnWXI"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-23T13:01:13Z",
+        "channelId": "UCB_qr75-ydFVKSF9Dmo6izg",
+        "title": "FP2 Highlights | 2022 Emilia Romagna Grand Prix",
+        "description": "The action from the final practice session before F1 Sprint in Imola! For more F1® videos, visit http://www.Formula1.com Follow ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/W1be43bnWXI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/W1be43bnWXI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/W1be43bnWXI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "FORMULA 1",
+        "liveBroadcastContent": "none",
+        "publishTime": "2022-04-23T13:01:13Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3JUHTgaRMpV15JwkL5x51cuAKYE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NLR0RAvdUF4"
+      },
+      "snippet": {
+        "publishedAt": "2022-04-23T18:31:32Z",
+        "channelId": "UCB_qr75-ydFVKSF9Dmo6izg",
+        "title": "F1 LIVE: Emilia Romagna Grand Prix Build-Up",
+        "description": "We're back in Italy at Imola for Round 4 of the championship. Will the Ferrari faithful see their team take the win? Or will someone ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NLR0RAvdUF4/default_live.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NLR0RAvdUF4/mqdefault_live.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NLR0RAvdUF4/hqdefault_live.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "FORMULA 1",
+        "liveBroadcastContent": "upcoming",
+        "publishTime": "2022-04-23T18:31:32Z"
+      }
+    }
+  ]
+}
