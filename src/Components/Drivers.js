@@ -26,21 +26,32 @@ function Drivers() {
         </Spinner>
       )}
       {drivers.MRData && (
-        <ul>
+        <table>
+          <thead>
+            <tr>
+              <th>Surname</th>
+              <th>First Name</th>
+              <th>Abbreviation</th>
+              <th>Nationality</th>
+              <th>Born</th>
+              <th>Wikipedia Page</th>
+            </tr>
+          </thead>
           {drivers.MRData.DriverTable.Drivers.map((driver, i) => (
-            <div key={i}>
-              <span>
-                Name: {driver.givenName}, {driver.familyName} ({driver.code}){" "}
-              </span><br/>
-              <span>Nationality: {driver.nationality} </span><br/>
-              <span>Born: {driver.dateOfBirth}</span><br/>
-              <span>
-                <a href={driver.url}>Wikipedia Page</a>{" "}
-              </span>
-              <br />
-            </div>
+            <tbody key={i}>
+              <tr>
+                <td>{driver.familyName}</td>
+                <td>{driver.givenName}</td>
+                <td>{driver.code}</td>
+                <td>{driver.nationality} </td>
+                <td>{driver.dateOfBirth}</td>
+                <td>
+                  <a href={driver.url} target="_blank" rel="noopener noreferrer">{driver.url}</a>
+                </td>
+              </tr>
+            </tbody>
           ))}
-        </ul>
+        </table>
       )}
     </div>
   )

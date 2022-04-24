@@ -1,6 +1,5 @@
 import "./App.scss"
-import React, { useEffect, useState } from "react"
-import { Routes, Route, Link } from "react-router-dom"
+import { Routes, Route} from "react-router-dom"
 import Home from "./Components/Home"
 import RaceResults from "./Components/RaceResults"
 import Drivers from "./Components/Drivers"

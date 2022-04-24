@@ -15,6 +15,7 @@ function RaceResults() {
   return (
     <div className="raceResults component">
       <h1>Latest Race Results</h1>
+
       {raceResults.MRData && (
         <div>
           <p>Season: {raceResults.MRData.RaceTable.Races[0].season}</p>
@@ -27,19 +28,31 @@ function RaceResults() {
             {raceResults.MRData.RaceTable.Races[0].Circuit.Location.locality},{" "}
             {raceResults.MRData.RaceTable.Races[0].Circuit.Location.country}
           </p>
-          <span>
+          <table>
+            <thead>
+              <tr>
+                <td>Position</td>
+                <td>First Name</td>
+                <td>Surname</td>
+                <td>Abbreviation</td>
+                <td>Status</td>
+                <td>Time</td>
+              </tr>
+            </thead>
+
             {raceResults.MRData.RaceTable.Races[0].Results.map((driver, i) => (
-              <div className="driver" key={i}>
-                <span>{driver.position}. </span>
-                <span>
-                  {driver.Driver.givenName}, {driver.Driver.familyName} (
-                  {driver.Driver.code}){" "}
-                </span>
-                <span>{driver.status}{" "}</span>
-                <span>{driver.Time && driver.Time.time}</span>
-              </div>
+              <tbody className="driver" key={i}>
+                <tr>
+                  <td>{driver.position}. </td>
+                  <td>{driver.Driver.givenName}</td>
+                  <td>{driver.Driver.familyName}</td>
+                  <td>{driver.Driver.code}</td>
+                  <td>{driver.status} </td>
+                  <td>{driver.Time && driver.Time.time}</td>
+                </tr>
+              </tbody>
             ))}
-          </span>
+          </table>
         </div>
       )}
     </div>

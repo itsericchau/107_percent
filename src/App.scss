@@ -14,13 +14,18 @@ h3 {
   font-size: 1em;
 }
 .component {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   background-color: antiquewhite;
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   border-radius: 5px;
   box-shadow: 5px 5px gainsboro;
-  font-size: 1.5em;
+  font-size: 1em;
+  table {
+    width: 100%;
+    white-space: nowrap;
+    text-align: center;
+  }
   img {
     width: 70%;
     box-shadow: 5px 5px gray;
@@ -38,7 +43,7 @@ h3 {
 }
 
 .navigation {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   background-color: #e10600;
   position: fixed;
   top: 0;
