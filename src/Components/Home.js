@@ -12,7 +12,8 @@ function Home() {
           channelId: "UCB_qr75-ydFVKSF9Dmo6izg",
           order: "relevance",
           maxResults: "4",
-          q: "f1",
+          q: "formula 1",
+          type: "video",
           key: process.env.REACT_APP_API_KEY,
         },
       })
