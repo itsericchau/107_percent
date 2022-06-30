@@ -1,5 +1,5 @@
 import "./App.scss"
-import { Routes, Route} from "react-router-dom"
+import { Routes, Route, Link } from "react-router-dom"
 import Home from "./Components/Home"
 import RaceResults from "./Components/RaceResults"
 import Drivers from "./Components/Drivers"
@@ -17,53 +17,64 @@ function App() {
       <nav className="navigation">
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="/">107%</Navbar.Brand>
+            <Navbar.Brand>
+              <Link to="#">107%</Link>
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/race_schedule">Race Schedule</Nav.Link>
+                <Link to="/">Home</Link>
+                <Link to="/race_schedule">Race Schedule</Link>
                 <NavDropdown title="Standings" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="/drivers_standings">
-                    Current Drivers Standings
+                  <NavDropdown.Item>
+                    <Link to="/drivers_standings">
+                      Current Drivers Standings
+                    </Link>
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/constructors_standings">
-                    Current Constructors Standings
+                  <NavDropdown.Item>
+                    <Link to="/constructors_standings">
+                      Current Constructors Standings
+                    </Link>
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/drivers_standings_2021">
-                    Driver Standings 2021
+                  <NavDropdown.Item>
+                    <Link to="/drivers_standings_2021">
+                      Driver Standings 2021
+                    </Link>
                   </NavDropdown.Item>
-                  <NavDropdown.Item href="/constructors_standings_2021">
-                    Constructors Standings 2021
+                  <NavDropdown.Item>
+                    <Link to="/constructors_standings_2021">
+                      Constructors Standings 2021
+                    </Link>
                   </NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/race_results">Race Results</Nav.Link>
-                <Nav.Link href="/drivers">Drivers</Nav.Link>
+                <Link to="/race_results">Race Results</Link>
+                <Link to="/drivers">Drivers</Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
         </Navbar>
       </nav>
       <main className="main">
-        <h1>107%</h1>
-        <h3>
-          For the latest Formula One coverage
-        </h3>
+        {/* <h1>107%</h1> */}
+        <h3>One Stop Shop for Formula One Content</h3>
 
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/drivers_standings" element={<DriversStandings />} />
           <Route
-            exact path="/drivers_standings_2021"
+            exact
+            path="/drivers_standings_2021"
             element={<DriversStandings2021 />}
           />
           <Route
-            exact path="/constructors_standings"
+            exact
+            path="/constructors_standings"
             element={<ConstructorsStandings />}
           />
           <Route
-            exact path="/constructors_standings_2021"
+            exact
+            path="/constructors_standings_2021"
             element={<ConstructorsStandings2021 />}
           />
           <Route exact path="/race_results" element={<RaceResults />} />

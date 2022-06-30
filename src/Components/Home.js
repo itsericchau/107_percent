@@ -27,12 +27,12 @@ function Home() {
       {news.items &&
         news.items.map((video, i) => (
           <div className="videos" key={i}>
-            <a
+            {/* <a
               href={"https://www.youtube.com/watch?v=" + video.id.videoId}
               target="_blank"
             >
               {"https://www.youtube.com/watch?v=" + video.id.videoId}
-            </a>
+            </a> */}
             <a
               href={"https://www.youtube.com/watch?v=" + video.id.videoId}
               target="_blank"
