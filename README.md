@@ -1,4 +1,4 @@
-Try the app! https://107percent.surge.sh/
+Try the app! https://itsericchau.github.io/107_percent/
 
 # 107 Percent
 This is a Single Page Application (SPA) made with React. A homeage to the ever increasing popularity of Formula One racing. 
