@@ -1,6 +1,7 @@
 {
   "name": "107_percent",
   "version": "0.1.0",
+  "homepage": "https://itsericchau.github.io/107_percent",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
@@ -21,7 +22,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "deploy": "npm run build; cd build; cp index.html 200.html; surge ./ 107percent.surge.sh"
+    "deploy-surge": "npm run build; cd build; cp index.html 200.html; surge ./ 107percent.surge.sh",
+    "predeploy": "npm run build && cp build/index.html build/404.html",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -40,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
   }
 }
