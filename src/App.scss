@@ -4,6 +4,11 @@
   display: grid;
   text-align: center;
 }
+
+body {
+background: #d1d1cd;
+}
+
 h1 {
   font-size: 3em;
 }
@@ -15,11 +20,11 @@ h3 {
 }
 .component {
   font-family: "Comfortaa", cursive;
-  background-color: antiquewhite;
+  // background-color: gray;
   width: 80%;
   margin: 0 auto;
   border-radius: 5px;
-  box-shadow: 5px 5px gainsboro;
+  // box-shadow: 5px 5px gainsboro;
   font-size: 1em;
   table {
     width: 100%;
@@ -28,7 +33,7 @@ h3 {
   }
   img {
     width: 50%;
-    box-shadow: 5px 5px gray;
+    // box-shadow: 5px 5px gray;
   }
   p {
     width: 70%;

@@ -57,7 +57,7 @@ function App() {
       </nav>
       <main className="main">
         {/* <h1>107%</h1> */}
-        <h3>One Stop Shop for Formula One Content</h3>
+        {/* <h3>One Stop Shop for Formula One Content</h3> */}
 
         <Routes>
           <Route exact path="/" element={<Home />} />
