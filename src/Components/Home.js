@@ -24,24 +24,27 @@ function Home() {
   }, [])
 
   return (
-    <div className="news component">
-      {news.items &&
-        news.items.map((video, i) => (
-          <div className="videos" key={i}>
-            {/* <a
+    <div className="home component">
+      <h1>Latest Official F1 videos</h1>
+      <div className="news">
+        {news.items &&
+          news.items.map((video, i) => (
+            <div className="videos" key={i}>
+              {/* <a
               href={"https://www.youtube.com/watch?v=" + video.id.videoId}
               target="_blank"
             >
               {"https://www.youtube.com/watch?v=" + video.id.videoId}
             </a> */}
-            {/* <a
+              {/* <a
               href={"https://www.youtube.com/watch?v=" + video.id.videoId}
               target="_blank"
             > */}
               <img src={video.snippet.thumbnails.high.url} alt="" />
-            {/* </a> */}
-          </div>
-        ))}
+              {/* </a> */}
+            </div>
+          ))}
+      </div>
     </div>
   )
 }
