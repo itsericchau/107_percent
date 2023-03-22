@@ -16,6 +16,7 @@ function RaceSchedule() {
   return (
     <div className="schedule component">
       <h1>Current Season Race Schedule</h1>
+      {!schedule.MRData && (<h2>Loading...</h2>) }
       {schedule.MRData && (
         <ul>
           {schedule.MRData.RaceTable.Races.map((round, i) => (

@@ -27,6 +27,7 @@ function Home() {
     <div className="home component">
       <h1>Latest Official F1 videos</h1>
       <div className="news">
+        {!news.items && <h2>Loading...</h2>}
         {news.items &&
           news.items.map((video, i) => (
             <div className="videos" key={i}>

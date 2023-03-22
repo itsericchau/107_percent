@@ -15,7 +15,7 @@ function RaceResults() {
   return (
     <div className="raceResults component">
       <h1>Latest Race Results</h1>
-
+      {!raceResults.MRData && <h2>Loading...</h2>}
       {raceResults.MRData && (
         <div>
           <p>Season: {raceResults.MRData.RaceTable.Races[0].season}</p>

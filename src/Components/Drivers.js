@@ -20,11 +20,7 @@ function Drivers() {
   return (
     <div className="drivers component">
       <h1>Current Drivers</h1>
-      {visible && (
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      )}
+      {!drivers.MRData && (<h2>Loading...</h2>) }
       {drivers.MRData && (
         <table>
           <thead>

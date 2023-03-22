@@ -16,6 +16,7 @@ function ConstructorsStandings2021() {
   return (
     <div className="standings component">
       <h1>Season 2021 Constructors Standings Final Results</h1>
+      {!standings.MRData && (<h2>Loading...</h2>) }
       {standings.MRData && (
         <div>
           <p>

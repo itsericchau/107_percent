@@ -16,6 +16,7 @@ function DriversStandings() {
   return (
     <div className="standings component">
       <h1>Current Drivers Standings</h1>
+      {!standings.MRData && (<h2>Loading...</h2>) }
       {standings.MRData && (
         <div>
           <p>

@@ -16,6 +16,7 @@ function ConstructorsStandings() {
   return (
     <div className="standings component">
       <h1>Current Constructors Standings</h1>
+      {!standings.MRData && <h2>Loading...</h2>}
       {standings.MRData && (
         <div>
           <p>
@@ -45,7 +46,16 @@ function ConstructorsStandings() {
                     <td>{constructor.points} </td>
                     <td>{constructor.wins} </td>
                     <td>{constructor.Constructor.nationality} </td>
-                    <td> <a href={constructor.Constructor.url} target="_blank" rel="noopener noreferrer">{constructor.Constructor.url}</a>  </td>
+                    <td>
+                      {" "}
+                      <a
+                        href={constructor.Constructor.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        {constructor.Constructor.url}
+                      </a>{" "}
+                    </td>
                   </tr>
                 </tbody>
               )

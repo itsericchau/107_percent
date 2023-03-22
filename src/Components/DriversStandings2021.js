@@ -20,11 +20,7 @@ function DriversStandings2021() {
   return (
     <div className="standings component">
       <h1>2021 Season Drivers Standings Final Results</h1>
-      {visible && (
-        <Spinner animation="border" role="status">
-          <span className="visually-hidden">Loading...</span>
-        </Spinner>
-      )}
+      {!standings.MRData && (<h2>Loading...</h2>) }
       {standings.MRData && (
         <div>
           <p>
