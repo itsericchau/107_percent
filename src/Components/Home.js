@@ -41,7 +41,15 @@ function Home() {
                 href={"https://www.youtube.com/watch?v=" + video.id.videoId}
                 target="_blank"
               >
-                <img src={video.snippet.thumbnails.high.url} alt="" />
+                {/* <img src={video.snippet.thumbnails.high.url} alt="" /> */}
+                <img
+                  src={
+                    "https://img.youtube.com/vi/" +
+                    video.id.videoId +
+                    "/maxresdefault.jpg"
+                  }
+                  alt=""
+                />
               </a>
             </div>
           ))}
