@@ -8,8 +8,8 @@ import Navbar from "react-bootstrap/Navbar"
 import { Container, Nav, NavDropdown } from "react-bootstrap"
 import DriversStandings from "./Components/DriversStandings"
 import ConstructorsStandings from "./Components/ConstructorsStandings"
-import DriversStandings2021 from "./Components/DriversStandings2021"
-import ConstructorsStandings2021 from "./Components/ConstructorsStandings2021"
+import DriversStandings2022 from "./Components/DriversStandings2022"
+import ConstructorsStandings2022 from "./Components/ConstructorsStandings2022"
 
 function App() {
   return (
@@ -38,13 +38,13 @@ function App() {
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item>
-                    <Link to="/drivers_standings_2021">
-                      Driver Standings 2021
+                    <Link to="/drivers_standings_2022">
+                      Driver Standings 2022
                     </Link>
                   </NavDropdown.Item>
                   <NavDropdown.Item>
-                    <Link to="/constructors_standings_2021">
-                      Constructors Standings 2021
+                    <Link to="/constructors_standings_2022">
+                      Constructors Standings 2022
                     </Link>
                   </NavDropdown.Item>
                 </NavDropdown>
@@ -56,16 +56,14 @@ function App() {
         </Navbar>
       </nav>
       <main className="main">
-        {/* <h1>107%</h1> */}
-        {/* <h3>One Stop Shop for Formula One Content</h3> */}
 
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route path="/drivers_standings" element={<DriversStandings />} />
           <Route
             exact
-            path="/drivers_standings_2021"
-            element={<DriversStandings2021 />}
+            path="/drivers_standings_2022"
+            element={<DriversStandings2022 />}
           />
           <Route
             exact
@@ -74,8 +72,8 @@ function App() {
           />
           <Route
             exact
-            path="/constructors_standings_2021"
-            element={<ConstructorsStandings2021 />}
+            path="/constructors_standings_2022"
+            element={<ConstructorsStandings2022 />}
           />
           <Route exact path="/race_results" element={<RaceResults />} />
           <Route exact path="/drivers" element={<Drivers />} />

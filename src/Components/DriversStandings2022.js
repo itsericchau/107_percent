@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
-import { Spinner } from "react-bootstrap"
 
-function DriversStandings2021() {
+function DriversStandings2022() {
   const [standings, setStandings] = useState({})
   const [visible, setVisible] = useState(true)
 
   const getDriverStandings = () => {
     setVisible(true)
     return axios
-      .get("https://ergast.com/api/f1/2021/driverStandings.json")
+      .get("https://ergast.com/api/f1/2022/driverStandings.json")
       .then((res) => res.data)
       .finally(setVisible(false))
   }
@@ -19,7 +18,7 @@ function DriversStandings2021() {
 
   return (
     <div className="standings component">
-      <h1>2021 Season Drivers Standings Final Results</h1>
+      <h1>2022 Season Drivers Standings Final Results</h1>
       {!standings.MRData && (<h2>Loading...</h2>) }
       {standings.MRData && (
         <div>
@@ -63,4 +62,4 @@ function DriversStandings2021() {
   )
 }
 
-export default DriversStandings2021
+export default DriversStandings2022

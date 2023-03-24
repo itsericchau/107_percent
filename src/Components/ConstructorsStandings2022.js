@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 
-function ConstructorsStandings2021() {
+function ConstructorsStandings2022() {
   const [standings, setStandings] = useState({})
 
   const getConstructorStandings = () => {
     return axios
-      .get("https://ergast.com/api/f1/2021/constructorStandings.json")
+      .get("https://ergast.com/api/f1/2022/constructorStandings.json")
       .then((res) => res.data)
   }
   useEffect(() => {
@@ -15,7 +15,7 @@ function ConstructorsStandings2021() {
 
   return (
     <div className="standings component">
-      <h1>Season 2021 Constructors Standings Final Results</h1>
+      <h1>Season 2022 Constructors Standings Final Results</h1>
       {!standings.MRData && (<h2>Loading...</h2>) }
       {standings.MRData && (
         <div>
@@ -58,4 +58,4 @@ function ConstructorsStandings2021() {
   )
 }
 
-export default ConstructorsStandings2021
+export default ConstructorsStandings2022
