@@ -37,12 +37,12 @@ function Home() {
             >
               {"https://www.youtube.com/watch?v=" + video.id.videoId}
             </a> */}
-              {/* <a
-              href={"https://www.youtube.com/watch?v=" + video.id.videoId}
-              target="_blank"
-            > */}
-              <img src={video.snippet.thumbnails.high.url} alt="" />
-              {/* </a> */}
+              <a
+                href={"https://www.youtube.com/watch?v=" + video.id.videoId}
+                target="_blank"
+              >
+                <img src={video.snippet.thumbnails.high.url} alt="" />
+              </a>
             </div>
           ))}
       </div>
