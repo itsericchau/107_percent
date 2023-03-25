@@ -1,14 +1,28 @@
 import React, { useEffect, useState } from "react"
 import axios from "axios"
 
+var options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+}
+
+function formatDate(dateTime) {
+  return new Date(dateTime.date + "T" + dateTime.time).toLocaleString(
+    "en-us",
+    options
+  )
+}
+const getSchedule = () => {
+  return axios
+    .get("https://ergast.com/api/f1/current.json")
+    .then((res) => res.data)
+}
+
 function RaceSchedule() {
   const [schedule, setSchedule] = useState({})
 
-  const getSchedule = () => {
-    return axios
-      .get("https://ergast.com/api/f1/current.json")
-      .then((res) => res.data)
-  }
   useEffect(() => {
     getSchedule().then((data) => setSchedule(data))
   }, [])
@@ -16,38 +30,76 @@ function RaceSchedule() {
   return (
     <div className="schedule component">
       <h1>Current Season Race Schedule</h1>
-      {!schedule.MRData && (<h2>Loading...</h2>) }
+      {!schedule.MRData && <h2>Loading...</h2>}
       {schedule.MRData && (
         <ul>
           {schedule.MRData.RaceTable.Races.map((round, i) => (
             <div key={i}>
               <span>
-              {round.Circuit.circuitName} |{" "}
-                {round.Circuit.Location.locality},{" "}
+                {round.Circuit.circuitName} | {round.Circuit.Location.locality},{" "}
                 {round.Circuit.Location.country}
               </span>
               <br />
-              <span>
-                FP1: {round.FirstPractice.date}, {round.FirstPractice.time}
+              <span
+                style={
+                  new Date(
+                    round.FirstPractice.date + "T" + round.FirstPractice.time
+                  ) < new Date()
+                    ? { color: "grey", textDecoration: "line-through" }
+                    : undefined
+                }
+              >
+                FP1: {formatDate(round.FirstPractice)}
               </span>
               <br />
-              <span>
-                FP2: {round.SecondPractice.date}, {round.SecondPractice.time}
+              <span
+                style={
+                  new Date(
+                    round.FirstPractice.date + "T" + round.FirstPractice.time
+                  ) < new Date()
+                    ? { color: "grey", textDecoration: "line-through" }
+                    : undefined
+                }
+              >
+                FP2: {formatDate(round.SecondPractice)}
               </span>
               <br />
-              <span>
-                {round.ThirdPractice && "FP3: " + round.ThirdPractice.date}
-                {round.Sprint && "Sprint: " + round.Sprint.date},{" "}
-                {round.ThirdPractice && round.ThirdPractice.time}
-                {round.Sprint && round.Sprint.time}
+              <span
+                style={
+                  new Date(
+                    round.FirstPractice.date + "T" + round.FirstPractice.time
+                  ) < new Date()
+                    ? { color: "grey", textDecoration: "line-through" }
+                    : undefined
+                }
+              >
+                {round.ThirdPractice &&
+                  "FP3: " + formatDate(round.ThirdPractice)}
+                {round.Sprint && "Sprint: " + formatDate(round.Sprint)}
               </span>
               <br />
-              <span>
-                Qualifying: {round.Qualifying.date}, {round.Qualifying.time}
+              <span
+                style={
+                  new Date(
+                    round.FirstPractice.date + "T" + round.FirstPractice.time
+                  ) < new Date()
+                    ? { color: "grey", textDecoration: "line-through" }
+                    : undefined
+                }
+              >
+                Qualifying: {formatDate(round.Qualifying)}
               </span>
               <br />
-              <span>
-                Race: {round.date}, {round.time}
+              <span
+                style={
+                  new Date(
+                    round.FirstPractice.date + "T" + round.FirstPractice.time
+                  ) < new Date()
+                    ? { color: "grey", textDecoration: "line-through" }
+                    : undefined
+                }
+              >
+                Race: {formatDate(round)}
               </span>
               <br />
               <br />
